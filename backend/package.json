@@ -1,0 +1,14 @@
+{
+  "name": "template-backend-oracle",
+  "module": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --hot src/index.ts",
+    "test:oracle": "bun run src/uji-oracle.ts",
+    "uji-oracle": "bun run src/uji-oracle.ts"
+  },
+  "dependencies": {
+    "hono": "^4.7.4",
+    "viem": "^2.23.0"
+  }
+}

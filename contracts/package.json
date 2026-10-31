@@ -1,0 +1,14 @@
+{
+  "name": "template-contracts-escrow",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "deploy:bsc": "hardhat run scripts/deploy.js --network bscTestnet",
+    "verify:bsc": "hardhat verify --network bscTestnet"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "dotenv": "^16.4.7",
+    "hardhat": "^2.22.18"
+  }
+}
