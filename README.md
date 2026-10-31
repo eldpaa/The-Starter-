@@ -54,11 +54,11 @@
 
 ---
 
-## 🔗 Important Links (Hackathon Showcase)
+## 🔗 Project Links & Verified Contract
 
-* **Live Demo dApp:** [http://localhost:5173](http://localhost:5173) *(Development Server)*
-* **Video Pitch & Demo (2 Menit):** [https://youtu.be/demo-video-id](https://youtu.be/demo-video-id) *(Ganti dengan link video YouTube/Loom)*
+* **Source Repository:** [GitHub Repository](https://github.com/eldpaa/The-Starter-)
 * **Verified Contract (BscScan Testnet):** [`0xF267733e996938bFfe8437F6D60Be6D5798268e4`](https://testnet.bscscan.com/address/0xF267733e996938bFfe8437F6D60Be6D5798268e4)
+* **dApp Web Interface:** [dApp Client Link](https://github.com/eldpaa/The-Starter-#3-frontend-dapp-frontend)
 
 ### 📜 On-Chain Proof of Work (Live Testnet Verification)
 
@@ -184,7 +184,7 @@ cp .env.example .env
 npm run dev
 ```
 
-Buka peramban di `http://localhost:5173`. Hubungkan dompet Anda ke **BNB Smart Chain Testnet** dan coba kirim URL bukti kerjaan.
+Buka peramban pada URL interface dApp yang tersedia. Hubungkan dompet Anda ke **BNB Smart Chain Testnet** dan kirim bukti pekerjaan.
 
 ---
 
@@ -197,10 +197,9 @@ Buka peramban di `http://localhost:5173`. Hubungkan dompet Anda ke **BNB Smart C
 
 ---
 
-## 🎤 Hackathon Pitch Checklist (Sesi 9)
+## 🗺️ Roadmap & Future Enhancements
 
-Saat presentasi di hadapan juri (durasi 3 menit):
-* [x] **0:00 - 0:45 (The Hook & Problem):** Tunjukkan rasa frustrasi kreator & pekerja atas lamanya pencairan bounty dan ancaman penipuan di Web3.
-* [x] **0:45 - 1:45 (Live Demo):** Hubungkan MetaMask $\rightarrow$ Submit URL PR GitHub $\rightarrow$ Tunjukkan status berubah jadi "Sedang diverifikasi AI" $\rightarrow$ Dana langsung cair dalam 15 detik on-chain.
-* [x] **1:45 - 2:30 (Under The Hood):** Paparkan arsitektur: Dual-currency Smart Contract, AI Oracle dengan ambang batas $0.80$, dan mediasi sengketa netral jika bukti meragukan.
-* [x] **2:30 - 3:00 (Vision & Future Roadmap):** Pemanfaatan zkTLS untuk verifikasi privat dan ekspansi *milestone-based escrows*.
+* [ ] **zkTLS Integration:** Verifikasi bukti pekerjaan secara privat tanpa mengekspos kredensial atau API key sensitif ke publik.
+* [ ] **Milestone-Based Escrow:** Dukungan pencairan bertahap untuk tugas skala besar dengan verifikasi multi-tahap.
+* [ ] **Multi-Model Consensus Oracle:** Agregasi skor dari beberapa penyedia LLM independen untuk meminimalkan ketergantungan pada satu model AI.
+* [ ] **Cross-Chain Expansion:** Perluasan protokol ke jaringan EVM Layer-2 dan ekosistem multi-chain lainnya.

@@ -33,7 +33,7 @@ Dokumentasi alur logika dan first principle dari template `template-web3-ai-star
   * `frontend/src/App.tsx`: Dashboard utama penggabung detail escrow, submit form, dan status AI real-time.
   * `frontend/src/main.tsx`: Entry point React DOM.
 * **Dokumentasi & Setup:**
-  * `README.md`: Panduan lengkap repositori untuk juri hackathon (Problem, Solution, Arsitektur, Quickstart, Pitch Checklist).
+  * `README.md`: Dokumentasi utama repositori (Problem, Solution, Arsitektur, On-Chain Proof of Work, Quickstart, Roadmap).
   * `flow.md`: Dokumentasi first principles teknis monorepo.
 
 ---
@@ -85,9 +85,9 @@ Dokumentasi alur logika dan first principle dari template `template-web3-ai-star
                                                  ├── Juri AI memverifikasi di backend
                                                  └── UI otomatis refresh status on-chain
 ```
-# Rangkuman Jejak Rekam On-Chain (Audit Trail Hackathon)
+## 4. Rangkuman Jejak Rekam On-Chain (On-Chain Audit Trail)
 
-Semua tx hash ini adalah bukti valid untuk juri hackathon:
+Seluruh bukti transaksi telah diverifikasi dan terekam di BNB Smart Chain Testnet:
 1. Deploy Kontrak MultiEscrow: 0xF267733e996938bFfe8437F6D60Be6D5798268e4
 
 logs terminal = 
@@ -202,5 +202,6 @@ to                   0xF267733e996938bFfe8437F6D60Be6D5798268e4
 berganti dari yang seketa menjadi selesai 
 
 
-# Folder template-web3-ai-starter/ sekarang sudah berstatus Production-Ready Boilerplate:
-- Setiap kali kamu punya ide Web3 x AI baru, kamu tinggal copy-paste folder ini dan langsung fokus ke ide bisnismu tanpa perlu merakit kontrak, AI relayer, atau frontend dari nol lagi.
+## 5. Ringkasan Ekosistem
+
+Arsitektur ini menggabungkan otomasi kurasi AI off-chain (Hono + LLM Strict JSON Schema) dengan kepastian hukum terdesentralisasi smart contract on-chain (BNB Smart Chain).
