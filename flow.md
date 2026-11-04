@@ -205,3 +205,45 @@ berganti dari yang seketa menjadi selesai
 ## 5. Ringkasan Ekosistem
 
 Arsitektur ini menggabungkan otomasi kurasi AI off-chain (Hono + LLM Strict JSON Schema) dengan kepastian hukum terdesentralisasi smart contract on-chain (BNB Smart Chain).
+
+---
+
+## 6. Alur Solusi Terstruktur: Panel Mediasi Admin (Human-in-the-Loop)
+
+Dokumentasi alur penyelesaian sengketa berbasis kurasi AI dan konfirmasi satu-klik manusia tanpa CLI terminal:
+
+### 1. Diagram Alur Mediasi
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│               PANEL MEDIASI ADMIN (WEB DAPP)                │
+│                                                             │
+│ 📋 Ringkasan Analisis AI (Checklist 4 Poin):                │
+│  [✓] 1. Akses Link   : URL dapat diakses & responsif        │
+│  [✓] 2. Relevansi    : Sesuai kriteria sayembara            │
+│  [!] 3. Kelengkapan  : Bukti ambigu / butuh verifikasi      │
+│  💡 4. Rekomendasi   : Saran keputusan juri AI              │
+│                                                             │
+│ [ Tombol Hijau: Setujui & Cairkan ]   [ Tombol Merah: Tolak ]│
+└──────────────────────────────┬──────────────────────────────┘
+                               │
+                               ▼
+        Konfirmasi On-Chain (Wagmi / MetaMask Admin)
+                               │
+                               ▼
+                MultiEscrow.resolveDispute(bool)
+                               │
+            ┌──────────────────┴──────────────────┐
+            ▼                                     ▼
+ [Setujui: Dana Cair ke Worker]         [Tolak: Refund ke Creator]
+```
+
+### 2. Format Checklist Ringkasan AI
+1. **Aksesibilitas Bukti:** Validasi apakah link publik aktif (bukan 404, bukan private repo).
+2. **Relevansi Pekerjaan:** Keselarasan materi submission dengan instruksi tugas.
+3. **Kelengkapan Hasil:** Kode/demo fungsional tanpa indikasi manipulasi/plagiasi.
+4. **Rekomendasi Juri AI:** Skor keyakinan akhir dan justifikasi objektif.
+
+### 3. Analisis Keamanan & Gas Fee
+* **Gas Fee:** Transaksi blockchain selalu membutuhkan gas fee. Perbedaannya terletak pada pembayar: server (custodial relayer) vs dompet admin (non-custodial).
+* **Keamanan:** Pendekatan non-custodial via tombol Web dApp yang memicu MetaMask jauh lebih aman karena private key Admin tidak pernah disimpan di server backend, mencegah celah eksploitasi API publik.

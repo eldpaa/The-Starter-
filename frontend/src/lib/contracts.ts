@@ -3,13 +3,23 @@ import { parseAbi } from "viem";
 export const CONTRACT_ADDRESS = (import.meta.env.VITE_CONTRACT_ADDRESS ||
   "0x0000000000000000000000000000000000000000") as `0x${string}`;
 
-export const STATUS_LABELS = [
+export const STATUS_LABELS_ID = [
   "Dibuka",
   "Disubmit",
   "Sengketa",
   "Selesai",
   "Dibatalkan",
 ] as const;
+
+export const STATUS_LABELS_EN = [
+  "Open",
+  "Submitted",
+  "Disputed",
+  "Completed",
+  "Cancelled",
+] as const;
+
+export const STATUS_LABELS = STATUS_LABELS_EN;
 
 export type StatusEscrow = (typeof STATUS_LABELS)[number];
 
